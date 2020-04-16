@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>DOM Traversal</title>
+
+
 <link href="css/meyerReset.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/GOT_master.css" rel="stylesheet" type="text/css" media="screen">
 </head>
@@ -11,7 +13,8 @@
     <main>
 
     <section id="imageContainer">
-    	<div id="houseImages"> <!-- add in all of the images to make a scrolling "banner" -->
+    	<div id="houseImages" style="right: 0"> 
+        <!-- add in all of the images to make a scrolling "banner" -->
     		<img src="images/stark.jpg"/>
     		<img src="images/baratheon.jpg"/>
     		<img src="images/lannister.jpg"/>
@@ -33,10 +36,23 @@
         </ul>
     </nav>
 
-    <h1>clever tagline goes here</h1><!-- replace this with the house name -->
+    <h1>The Choice is Yours</h1><!-- replace this with the house name -->
 
     <p class="house-info"></p><!-- replace this with house details (github gist) -->
 </main>  <!--end mainContainer-->
+
+<!-- put our lightbox on the top of the stack -->
+<section class="lightBox">
+  <span class="lightBoxClose">X</span>
+
+  <video class="lightBoxVideo" src="video/House-Stark.mp4"></video>
+    <div class="videoControls">
+        <button id="playBtn" class="playPause btn">Pause</button>
+        <button id="muteBtn" class="btn">Mute</button>
+        <label for="volume-slider">Volume:</label> 
+        <input id="volume-slider" type="range" min="1" max="100" class="volume" value="100">
+    </div>
+</section>
 
 <script src="js/GOT_master.js"></script>
 </body>
